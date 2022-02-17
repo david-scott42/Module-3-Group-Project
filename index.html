@@ -9,9 +9,15 @@
 <body>
     <h1>Travel Planning Assistant</h1>
     <div class="col" id="inputDIV">
-        <!-- form defined in script.js -->
+        <form id="location">
+            <input type="text" class="form-control" placeholder="City" aria-label="City" name="City">
+            <input type="text" class="form-control" placeholder="Country" aria-label="Country" name="Country">
+            <input class="btn btn-primary" type="submit" value="Get Info">
+            </form>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="webcams.js"></script>
+    <script type="module" src="weather.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
