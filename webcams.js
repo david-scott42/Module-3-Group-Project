@@ -3,7 +3,7 @@ import {formElement, newCity, newCountry} from './script.js';
 
 formElement.addEventListener("submit", (e) => { 
     e.preventDefault();
-        //on click, submit "newCity" and "newCountry" to API
+        //on click, submit "newCity" and "newCountry" andfetch API
         fetch('https://api.windy.com/api/webcams/v2/api/webcams/v2/list/region=CH.ZH',{  // 'region=CH.ZH' is a placeholder, will need to be replaced with user input, probaly in lat/lon format?
             //  returning invalid request ?? 
         method: 'GET',
