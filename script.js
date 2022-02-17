@@ -1,4 +1,3 @@
-console.log(`Hello`);
 console.log(document,window)
 
 
@@ -24,21 +23,6 @@ formElement.addEventListener("submit", (e) => {
 })
 
 
-fetch('https://api.windy.com/api/webcams/v2/api/webcams/v2/list/region=CH.ZH',{  //  returning invalid request ?? 
-    method: 'GET',
-    withCredentials: true,
-    headers: {
-        "x-windy-key": "DBCA7SRhIWGQeSvEOUONhjJpttmWQzlq",
-        "Content-Type": "application/json"  
-    }
-})
-    .then(res => {
-        if (res.ok){
-            console.log(res.json())
-        } else {
-            console.log('API unsuccessful')
-        }
-    })
-    .then(data => console.log(data))
+
 
 export {formElement, newCity, newCountry}

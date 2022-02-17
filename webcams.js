@@ -1,5 +1,6 @@
 import {formElement, newCity, newCountry} from './script.js';
 
+
 formElement.addEventListener("submit", (e) => { 
     e.preventDefault();
         //on click, submit "newCity" and "newCountry" to API
