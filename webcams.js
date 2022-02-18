@@ -1,11 +1,11 @@
 import {formElement, newCity, newCountry} from './script.js';
-
+import {lat, lon} from './geoconvert.js'
 
 formElement.addEventListener("submit", (e) => { 
     e.preventDefault();
-        //on click, submit "newCity" and "newCountry" andfetch API
-        fetch('https://api.windy.com/api/webcams/v2/api/webcams/v2/list/region=CH.ZH',{  // 'region=CH.ZH' is a placeholder, will need to be replaced with user input, probaly in lat/lon format?
-            //  returning invalid request ?? 
+    // on click, submit "lat" and "lon" andfetch API
+    fetch(`https://api.windy.com/api/webcams/v2/list/nearby=${lat},${lon}`,{  
+            // 'region=CH.ZH' is a placeholder, will need to be replaced with user input, probaly in lat/lon format?
         method: 'GET',
         withCredentials: true,
         headers: {

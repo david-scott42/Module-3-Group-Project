@@ -1,5 +1,7 @@
-console.log(document,window)
+import {geocoding} from './files.js'
 
+
+console.log(document,window)
 
 // const inputHTML = `<form id="location">
 //             <input type="text" class="form-control" placeholder="City" aria-label="City" name="City">
@@ -19,7 +21,8 @@ formElement.addEventListener("submit", (e) => {
     e.preventDefault();
     newCity = e.target.elements[0].value
     newCountry = e.target.elements[1].value
-    console.log(newCity, newCountry)
+    geocoding(newCity, newCountry)
+    // console.log(newCity, newCountry)
 })
 
 
