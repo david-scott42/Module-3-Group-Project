@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Planning Assistant</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    
 </head>
 <body>
     <h1>Travel Planning Assistant</h1>
@@ -16,7 +18,23 @@
             <input class="btn btn-primary" type="submit" value="Get Info">
             </form>
     </div>
-
+    <div class="box">
+        <div class="search">
+            <input type="text" class="search-bar" placeholder="City">
+            <input type="text" class="search-bar" placeholder="Country">
+            <button>Search</button>
+        </div>
+    <div class="weather">
+        <h2 class="city">Weather in Orlando</h2>
+        <div class="temp">80 °F</div>
+        <div class="flex">
+            <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+            <div class="description">Cloudy</div>
+        </div>
+        <div class="humidity">Humidity: 80%</div>
+        <div class="wind">Wind Speed: 2 mph</div>    
+    </div>    
+</div>
     <script type="module" src="webcams.js"></script>
     <script type="module" src="weather.js"></script>
     <script type="module" src="script.js"></script>
