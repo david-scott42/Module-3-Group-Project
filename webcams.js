@@ -3,9 +3,9 @@ import {lat, lon} from './geoconvert.js'
 
 formElement.addEventListener("submit", (e) => { 
     e.preventDefault();
+
     // on click, submit "lat" and "lon" andfetch API
-    fetch(`https://api.windy.com/api/webcams/v2/list/nearby=${lat},${lon}`,{  
-            // 'region=CH.ZH' is a placeholder, will need to be replaced with user input, probaly in lat/lon format?
+    fetch(`https://api.windy.com/api/webcams/v2/list/nearby=46.54,7.98,5?show=webcams:location,image`,{ 
         method: 'GET',
         withCredentials: true,
         headers: {
