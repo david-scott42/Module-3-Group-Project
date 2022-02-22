@@ -18,7 +18,6 @@ let weather = {
             .then((response) => {
                 if (!response.ok) {
                     alert("City Not Found....Try again!");
-                    // throw new Error("No Information Available");
                 }
                 return response.json();
             })
@@ -34,8 +33,8 @@ let weather = {
         document.querySelector(".icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".description").innerText = description;
         document.querySelector(".temp").innerText = temp.toFixed() + " °F";
-        document.querySeelctor(".humidity").innerText = "Humidity: " + humidity + " %";
-        document.querySelector(".speed").innerText = "Wind Speed: " + speed + " mph";
+        document.querySelector(".humidity").innerText = "Humidity: " + humidity + " %";
+        document.querySelector(".wind").innerText = "Wind Speed: " + speed.toFixed() + " mph";
         document.querySelector(".weather").classList.remove("loading");
         document.body.style.backgroundImage = "url('https://source.unsplash.com/?" + name + "')";
     },
