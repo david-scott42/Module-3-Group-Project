@@ -16,9 +16,9 @@ let weather = {
         fetch(
         "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + this.apiKey)
             .then((response) => {
-                if (!response.ok) {
-                    alert("City Not Found....Try again!");
-                }
+                // if (!response.ok) {
+                //     alert("City Not Found....Try again!");
+                // }
                 return response.json();
             })
             .then((data) => this.displayWeather(data));
