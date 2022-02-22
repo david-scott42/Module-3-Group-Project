@@ -24,8 +24,7 @@ var camElement = document.getElementById("webcamDiv");
         lon = data.features[0].center[1].toFixed(2)  //Longitutde of input location
         console.log(lat,lon)
     })
-    .then(data => {
-
+    .then(webCamFetch => {
     // on click, submit "lat" and "lon" andfetch API
         fetch(`https://api.windy.com/api/webcams/v2/list/nearby=${lat},${lon},250`,{ 
         // tagged out because the 'nearby' cann isn't working
