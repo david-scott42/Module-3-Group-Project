@@ -1,16 +1,5 @@
 console.log(document,window)
 
-// import {geocoding} from './geoconvert';  // trying to call this function remotely, but no...
-
-// const inputHTML = `<form id="location">
-//             <input type="text" class="form-control" placeholder="City" aria-label="City" name="City">
-//             <input type="text" class="form-control" placeholder="Country" aria-label="Country" name="Country">
-//             <input class="btn btn-primary" type="submit" value="Get Info">
-//             </form>`;
-
-
-// inputDIV.innerHTML += inputHTML;
-
 let formElement = document.getElementById("location");
 
 let newCity = '';
@@ -23,8 +12,5 @@ formElement.addEventListener("submit", (e) => {
     // geocoding(newCity, newCountry);  // trying to call this function remotely, but no...
     console.log(newCity, newCountry)
 })
-
-
-
 
 export {formElement, newCity, newCountry}
