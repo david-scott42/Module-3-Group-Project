@@ -1,8 +1,7 @@
-//enter api for currency converter
 const select = document.querySelectorAll(".currency");
 const change = document.getElementById("change");
 const num = document.getElementById("num");
-const ans = document.getElementById("ans");
+const update = document.getElementById("update");
 
 fetch("https://api.frankfurter.app/currencies")
     .then((data) => data.json())
@@ -14,7 +13,7 @@ function display(data) {
     const entries = Object.entries(data);
     for (let i = 0; i < entries.length; i++) {
         select[0].innerHTML += `<option value="${entries[i][0]}">${entries[i][0]}</option`;
-        select[1].innerHTML += `<option value="${entries[i][0]}">${entries[i][0]}</option`;
+        select[1].innerHTML += `<option value="${entries[25]}">${entries[i][0]}</option`;
     }
 }
 
@@ -37,6 +36,6 @@ fetch(
 .then(val => val.json())
 .then((val) => {
     console.log(Object.values(val.rates)[0]);
-    ans.value = Object.values(val.rates)[0];
+    update.value = Object.values(val.rates)[0];
     });
 }

@@ -1,13 +1,13 @@
-import {formElement, newCity} from './script.js';
+// import {formElement, newCity} from './script.js';
 
-formElement.addEventListener("submit", (e) => { 
-    e.preventDefault();
-    //     //on click, submit "newCily" and "newCountry" to API
-    fetch('http://reqres.in/api/users/1', {
-        newCity
-    })
-    .then(res => console.log(res))
-})
+// formElement.addEventListener("submit", (e) => { 
+//     e.preventDefault();
+//     //     //on click, submit "newCily" and "newCountry" to API
+//     fetch('http://reqres.in/api/users/1', {
+//         newCity
+//     })
+//     .then(res => console.log(res))
+// })
 
 let weather = {
     apiKey: "edb8e8f237bd04242980477250c51925",
@@ -16,9 +16,6 @@ let weather = {
         fetch(
         "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + this.apiKey)
             .then((response) => {
-                // if (!response.ok) {
-                //     alert("City Not Found....Try again!");
-                // }
                 return response.json();
             })
             .then((data) => this.displayWeather(data));
@@ -36,7 +33,6 @@ let weather = {
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + " %";
         document.querySelector(".wind").innerText = "Wind Speed: " + speed.toFixed() + " mph";
         document.querySelector(".weather").classList.remove("loading");
-        document.body.style.backgroundImage = "url('https://source.unsplash.com/?" + name + "')";
     },
     search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
@@ -55,4 +51,4 @@ let weather = {
         }
     });
     
-    weather.fetchWeather("Orlando");
+    weather.fetchWeather("Atlanta");
