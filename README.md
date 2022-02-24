@@ -1,3 +1,5 @@
+Project Info:
+
 Travel Planning Assistant 
     This is a simple app to help you plan your next trip!
 
