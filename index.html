@@ -20,10 +20,12 @@
     <div class="box">
         <h1>Travel Planning Assistant</h1>
         <div class="search">
-            <input type="text" class="search-bar" placeholder="City">
-            <input type="text" class="search-bar" placeholder="State">
-            <input type="text" class="search-bar" placeholder="Country">
-            <button>Search</button>
+            <form id="location">
+                <input type="text" class="search-bar" id="citySearch" placeholder="City">
+                <input type="text" class="search-bar" id="stateSearch" placeholder="State">
+                <input type="text" class="search-bar" id="countrySearch" placeholder="Country">
+                <button>Search</button>
+            </form>
         </div>
     <div class="weather">
         <h1 class="city">Weather in Orlando</h1>
@@ -34,6 +36,9 @@
         </div>
         <div class="humidity">Humidity: 80%</div>
         <div class="wind">Wind Speed: 2 mph</div>    
+    </div>
+    <div id="gpsDiv">
+
     </div>
     <h1>Currency Converter</h1>
     <div class="boxes">
@@ -48,9 +53,9 @@
         <button class="change" id="change">Convert</button>
     </div>    
 </div>
-    <script type="module" src="webcams.js"></script>
+    <script type="module" src="geoconvert.js"></script>
     <script type="module" src="weather.js"></script>
     <script type="module" src="currency.js"></script>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="script.js"></script> 
 </body>
 </html>

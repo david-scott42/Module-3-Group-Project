@@ -13,16 +13,18 @@ console.log(document,window)
 let formElement = document.getElementById("location");
 
 let newCity = '';
+let newState = '';
 let newCountry = '';
 
 formElement.addEventListener("submit", (e) => {
     e.preventDefault();
     newCity = e.target.elements[0].value
-    newCountry = e.target.elements[1].value
-    console.log(newCity, newCountry)
+    newState = e.target.elements[1].value
+    newCountry = e.target.elements[2].value
+    // console.log(newCity, newState, newCountry)
 })
 
 
 
 
-export {formElement, newCity, newCountry}
+export {formElement, newCity, newState, newCountry}
