@@ -32,7 +32,6 @@ let weather = {
         document.querySelector(".temp").innerText = temp.toFixed() + " °F";
         document.querySelector(".humidity").innerText = "Humidity: " + humidity + " %";
         document.querySelector(".wind").innerText = "Wind Speed: " + speed.toFixed() + " mph";
-        document.querySelector(".weather").classList.remove("loading");
     },
     search: function () {
     this.fetchWeather(document.querySelector(".search-bar").value);
