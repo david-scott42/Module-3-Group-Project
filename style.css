@@ -37,8 +37,8 @@ button {
     margin: 0.5em;
     border: none;
     border-radius: 50%;
-    height: 44px;
-    width: 44px;
+    height: 60px;
+    width: 60px;
     outline: none;
     background: #7c7c7c2b;
     color:white;
@@ -57,7 +57,7 @@ padding: 0.5em 1em;
 border-radius: 24px;
 background: #7c7c7c2b;
 color: white;
-font-family:'Times New Roman', Times, serif;
+font-family: 'Fredoka One', cursive;
 font-size: 105%;
 width: calc(100% - 100px);
 }
@@ -75,20 +75,6 @@ h1.temp {
 .description {
     text-transform: capitalize;
     margin-left: 8px;
-
+    color:darkorange;
 }
 
-.weather.loading {
-    visibility: hidden;
-    max-height: 20px;
-    position: relative;
-}
-
-.weather.loading:after {
-    visibility: visible;
-    content: "Loading.....";
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 20px;
-}
